@@ -46,6 +46,6 @@ class BoatsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def boat_params
-      params.require(:boat).permit(:name, :ownerName, :ownerEmail, :ownerPhone, :length, :type, :make, :year, :stored)
+      params.require(:boat).permit(:name, :ownerName, :ownerEmail, :ownerPhone, :length, :boatType, :make, :year, :stored)
     end
 end
