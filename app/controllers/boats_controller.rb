@@ -3,7 +3,7 @@ class BoatsController < OpenReadController
 
   # GET /boats
   def index
-    @boats = Boat.all
+    @boats = current_user.boats.all
 
     render json: @boats
   end
@@ -15,7 +15,7 @@ class BoatsController < OpenReadController
 
   # POST /boats
   def create
-    @boat = Boat.new(boat_params)
+    @boat = current_user.boats.build(boat_params)
 
     if @boat.save
       render json: @boat, status: :created, location: @boat
