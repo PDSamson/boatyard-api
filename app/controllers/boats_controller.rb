@@ -3,7 +3,7 @@ class BoatsController < OpenReadController
 
   # GET /boats
   def index
-    @boats = current_user.boats.all
+    @boats = Boat.all
 
     render json: @boats
   end
@@ -46,6 +46,6 @@ class BoatsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def boat_params
-      params.require(:boat).permit(:name, :ownerName, :ownerEmail, :ownerPhone, :length, :boatType, :make, :year, :stored)
+      params.require(:boat).permit(:name, :owner_name, :owner_email, :owner_phone, :length, :boat_type, :make, :year, :stored)
     end
 end
