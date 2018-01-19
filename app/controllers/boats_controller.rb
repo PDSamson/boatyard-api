@@ -3,7 +3,7 @@ class BoatsController < OpenReadController
 
   # GET /boats
   def index
-    @boats = Boat.all
+    @boats = current_user.boats.all
 
     render json: @boats
   end
