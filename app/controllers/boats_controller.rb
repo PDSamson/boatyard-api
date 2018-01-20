@@ -41,7 +41,7 @@ class BoatsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_boat
-      @boat = Boat.find(params[:id])
+      @boat = current_user.boats.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
