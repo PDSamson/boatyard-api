@@ -6,11 +6,11 @@ curl "http://localhost:4741/boats" \
   --data '{
     "boat": {
       "name": "'"${NAME}"'",
-      "ownerName": "'"${OWNER}"'",
-      "ownerEmail": "'"${EMAIL}"'",
-      "ownerPhone": "'"${PHONE}"'",
+      "owner_name": "'"${OWNER}"'",
+      "owner_email": "'"${EMAIL}"'",
+      "owner_phone": "'"${PHONE}"'",
       "length": "'"${LENGTH}"'",
-      "boatType": "'"${TYPE}"'",
+      "boat_type": "'"${TYPE}"'",
       "make": "'"${MAKE}"'",
       "year": "'"${YEAR}"'",
       "stored": "'"${STORED}"'"
